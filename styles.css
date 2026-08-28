@@ -1,0 +1,78 @@
+body {
+  background-image: url("../images/background.jpeg");
+  background-size:100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+footer {
+  color: #010101;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.terminal{
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  transform : translate(-50%,-50%);
+  width : 70%;
+  height : 80%;
+  background-color : #f4efef;
+  border-radius : 15px;
+
+}
+
+.terminal-header{
+  display : flex;
+  gap : 10px;
+  justify-content : flex-start;
+  align-items : center;
+  background-color : #1a1515;
+  color : #888787;
+  padding : 5px;
+  font-size : 15px;
+  border-top-left-radius : 15px;
+  border-top-right-radius : 15px;  
+}
+
+.terminal-buttons{
+  display : flex;
+  justify-content : flex-start;
+  align-items : center;
+  padding : 5px;
+}
+
+.button_red{
+  background-color : #ff5f56;
+  width : 15px;
+  height : 15px;
+  border-radius : 50%;
+  margin-right : 5px;
+}
+
+.button_yellow{
+  background-color : #ffbd2e;
+  width : 15px;
+  height : 15px;
+  border-radius : 50%;
+  margin-right : 5px;
+}
+.button_green{
+  background-color : #27c93f;
+  width : 15px;
+  height : 15px;
+  border-radius : 50%;
+  margin-right : 5px;
+}
+
+.terminal-title-container{
+  display : flex;
+  gap : 5px;
+  align-items : center;
+  width : 100%;
+}
