@@ -2,8 +2,16 @@ const terminalForm = document.querySelector("#terminal-form");
 const terminalInput = document.querySelector("#terminal-input");
 const terminalOutput = document.querySelector("#terminal-output");
 const commandButtons = document.querySelectorAll("[data-command]");
+const projectCards = document.querySelectorAll("[data-repository]");
+const skillsGrid = document.querySelector(".skills-grid");
+const skillsSection = document.querySelector("#skills");
 const commandHistory = [];
 let historyIndex = 0;
+const pointerReactive = document.querySelectorAll(".pointer-reactive");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let pointerFrame;
+let pointerX = window.innerWidth / 2;
+let pointerY = window.innerHeight / 2;
 
 const commands = {
   help: {
@@ -20,6 +28,50 @@ const commands = {
   skills: { target: "skills", output: "Loading technical skills matrix..." },
   contact: { target: "contact", output: "Opening terminal contact dispatch..." },
 };
+
+if (skillsGrid && skillsSection) {
+  if (reducedMotion.matches) {
+    skillsGrid.classList.add("is-visible");
+  } else {
+    const skillsObserver = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      skillsGrid.classList.add("is-visible");
+      skillsObserver.disconnect();
+    }, { threshold: 0.1, rootMargin: "0px 0px -10% 0px" });
+    skillsObserver.observe(skillsSection);
+  }
+}
+
+function updatePointerMotion() {
+  pointerFrame = undefined;
+  document.documentElement.style.setProperty("--pointer-x", `${pointerX}px`);
+  document.documentElement.style.setProperty("--pointer-y", `${pointerY}px`);
+
+  const offsetX = pointerX - window.innerWidth / 2;
+  const offsetY = pointerY - window.innerHeight / 2;
+  document.documentElement.style.setProperty("--parallax-x", `${offsetX * 0.018}px`);
+  document.documentElement.style.setProperty("--parallax-y", `${offsetY * 0.018}px`);
+  pointerReactive.forEach((element) => {
+    const depth = Number(element.dataset.parallaxDepth) || 0;
+    element.style.transform = `translate3d(${offsetX * depth}px, ${offsetY * depth}px, 0)`;
+  });
+}
+
+if (!reducedMotion.matches) {
+  const handlePointerMove = (event) => {
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+    if (!pointerFrame) pointerFrame = window.requestAnimationFrame(updatePointerMotion);
+  };
+
+  window.addEventListener("mousemove", handlePointerMove, { passive: true });
+  window.addEventListener("pointermove", handlePointerMove, { passive: true });
+  window.addEventListener("mouseleave", () => {
+    pointerX = window.innerWidth / 2;
+    pointerY = window.innerHeight / 2;
+    if (!pointerFrame) pointerFrame = window.requestAnimationFrame(updatePointerMotion);
+  });
+}
 
 function addOutput(command, message, isError = false) {
   const entry = document.createElement("div");
@@ -85,5 +137,22 @@ commandButtons.forEach((button) => {
     terminalInput.value = button.dataset.command;
     terminalForm.requestSubmit();
     terminalInput.focus();
+  });
+});
+
+projectCards.forEach((card) => {
+  const openRepository = () => {
+    window.open(card.dataset.repository, "_blank", "noopener,noreferrer");
+  };
+
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a")) return;
+    openRepository();
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    openRepository();
   });
 });

@@ -13,6 +13,10 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="background-particles" aria-hidden="true">
+    <i>+</i><i>·</i><i>0</i><i>✦</i><i>·</i><i>1</i><i>+</i><i>·</i>
+    <i>✧</i><i>0</i><i>·</i><i>+</i><i>1</i><i>·</i><i>✦</i><i>0</i>
+  </div>
   <div class="telemetry" aria-label="System telemetry">
     <span class="status"><i></i> aya@portfolio: ~/work</span>
     <span class="telemetry-message">● OPEN_FOR_WORK: AI Engineering | Full-Stack Development</span>
@@ -33,7 +37,7 @@
 
   <main class="page-grid">
     <div class="page-content">
-      <section class="terminal-window" id="whoami" aria-labelledby="whoami-title">
+      <section class="terminal-window pointer-reactive" data-parallax-depth="0.035" id="whoami" aria-labelledby="whoami-title">
         <div class="window-bar">
           <div class="window-controls"><i></i><i></i><i></i></div>
           <div class="window-tab">▣ bash - 80x24</div>
@@ -72,7 +76,7 @@
           <span class="section-meta">verified_credentials.bin</span>
         </div>
         <div class="education-grid">
-          <article class="panel education-main">
+          <article class="panel education-main pointer-reactive" data-parallax-depth="0.018">
             <div class="panel-top"><span class="tag">✧ CLASS OF MAY 2025</span><span>GPA: IN PROGRESS</span></div>
             <h3>Birzeit University</h3>
             <p>Bachelor of Science in Computer Science</p>
@@ -81,8 +85,8 @@
             <div class="chips"><span>Artificial Intelligence</span><span>Machine Learning</span><span>Data Structures</span><span>Databases</span><span>Software Engineering</span></div>
           </article>
           <div class="education-side">
-            <article class="panel compact-panel"><div class="panel-top"><span class="cyan">▧ AI ENGINEERING</span><span>NOW</span></div><h3>Building intelligent systems</h3><p>Hands-on work with machine learning, computer vision, and data-driven applications.</p></article>
-            <article class="panel compact-panel"><div class="panel-top"><span class="cyan">▧ FULL-STACK DEVELOPMENT</span><span>ACTIVE</span></div><h3>From interface to API</h3><p>Creating reliable products with modern frontend, backend, database, and REST API tools.</p></article>
+            <article class="panel compact-panel pointer-reactive" data-parallax-depth="0.024"><div class="panel-top"><span class="cyan">▧ AI ENGINEERING</span><span>NOW</span></div><h3>Building intelligent systems</h3><p>Hands-on work with machine learning, computer vision, and data-driven applications.</p></article>
+            <article class="panel compact-panel pointer-reactive" data-parallax-depth="0.024"><div class="panel-top"><span class="cyan">▧ FULL-STACK DEVELOPMENT</span><span>ACTIVE</span></div><h3>From interface to API</h3><p>Creating reliable products with modern frontend, backend, database, and REST API tools.</p></article>
           </div>
         </div>
       </section>
@@ -93,19 +97,19 @@
           <span class="section-meta">git status: clean | 3 tracked artifacts</span>
         </div>
         <div class="projects-grid">
-          <article class="panel project-card">
+          <article class="panel project-card pointer-reactive" data-parallax-depth="0.022" data-repository="https://github.com/aya0/LRMIS_webservice_finalproject" role="link" tabindex="0" aria-label="Open Land Registration Management Information System repository">
             <div class="panel-top"><span class="tag">● repo: lrmIS</span><span class="metric">★ featured</span></div>
             <h3>Land Registration Management Information System <a href="https://github.com/aya0/LRMIS_webservice_finalproject" target="_blank" rel="noreferrer">↗</a></h3>
             <p>Workflow platform for land applications, applicant profiles, documents, comments, objections, survey milestones, registrar reviews, analytics, and parcel map feeds.</p>
             <div class="tech-row"><span>FastAPI</span><span>React</span><span>MongoDB</span><span>REST API</span></div>
           </article>
-          <article class="panel project-card">
+          <article class="panel project-card pointer-reactive" data-parallax-depth="0.022" data-repository="https://github.com/NeuroLensG/CT-Model" role="link" tabindex="0" aria-label="Open Neuro Lens repository">
             <div class="panel-top"><span class="tag">● repo: neurolens</span><span class="metric">★ AI</span></div>
             <h3>Neuro Lens <a href="https://github.com/NeuroLensG/CT-Model" target="_blank" rel="noreferrer">↗</a></h3>
             <p>Graduation project exploring deep learning for brain glioma tumors in MRI scans and intracranial hemorrhages in CT scans.</p>
             <div class="tech-row"><span>Python</span><span>CNN</span><span>Computer Vision</span><span>Medical AI</span></div>
           </article>
-          <article class="panel project-card">
+          <article class="panel project-card pointer-reactive" data-parallax-depth="0.022" data-repository="https://github.com/RaheeqMousa/Flight-Delay-Prediction" role="link" tabindex="0" aria-label="Open Flight Delay Prediction repository">
             <div class="panel-top"><span class="tag">● repo: flight-delay</span><span class="metric">★ data</span></div>
             <h3>Flight Delay Prediction <a href="https://github.com/RaheeqMousa/Flight-Delay-Prediction" target="_blank" rel="noreferrer">↗</a></h3>
             <p>Data science pipeline analyzing airport and delay data, then predicting whether a flight will be delayed and explaining the result.</p>
@@ -120,15 +124,15 @@
           <span class="section-meta">profile.loaded: 18 competencies detected</span>
         </div>
         <div class="skills-grid">
-          <article class="panel skill-panel"><h3>▣ Languages &amp; Data</h3><div class="skill"><span>Python</span><b>Advanced</b><div><i style="width:92%"></i></div></div><div class="skill"><span>Java / C++</span><b>Advanced</b><div><i style="width:82%"></i></div></div><div class="skill"><span>NumPy / Pandas</span><b>Proficient</b><div><i style="width:88%"></i></div></div></article>
-          <article class="panel skill-panel"><h3>△ AI &amp; Development</h3><div class="skill"><span>Machine Learning</span><b>Advanced</b><div><i style="width:90%"></i></div></div><div class="skill"><span>Computer Vision</span><b>Proficient</b><div><i style="width:78%"></i></div></div><div class="skill"><span>HTML / CSS / JS</span><b>Advanced</b><div><i style="width:86%"></i></div></div></article>
-          <article class="panel skill-panel"><h3>◎ Core Foundations</h3><div class="foundation"><strong>Supervised Learning</strong><small>Classification, regression, evaluation</small></div><div class="foundation"><strong>Unsupervised Learning</strong><small>Clustering, feature engineering</small></div><div class="foundation"><strong>Engineering Tools</strong><small>Git, GitHub, Jupyter, Google Colab</small></div></article>
+          <article class="panel skill-panel pointer-reactive" data-parallax-depth="0.02"><h3>▣ Languages &amp; Data</h3><div class="skill"><span>Python</span><b>Advanced</b><div><i style="--skill-level:92%"></i></div></div><div class="skill"><span>Java / C++</span><b>Advanced</b><div><i style="--skill-level:82%"></i></div></div><div class="skill"><span>NumPy / Pandas</span><b>Proficient</b><div><i style="--skill-level:88%"></i></div></div></article>
+          <article class="panel skill-panel pointer-reactive" data-parallax-depth="0.02"><h3>△ AI &amp; Development</h3><div class="skill"><span>Machine Learning</span><b>Advanced</b><div><i style="--skill-level:90%"></i></div></div><div class="skill"><span>Computer Vision</span><b>Proficient</b><div><i style="--skill-level:78%"></i></div></div><div class="skill"><span>HTML / CSS / JS</span><b>Advanced</b><div><i style="--skill-level:86%"></i></div></div></article>
+          <article class="panel skill-panel pointer-reactive" data-parallax-depth="0.02"><h3>◎ Core Foundations</h3><div class="foundation"><strong>Supervised Learning</strong><small>Classification, regression, evaluation</small></div><div class="foundation"><strong>Unsupervised Learning</strong><small>Clustering, feature engineering</small></div><div class="foundation"><strong>Engineering Tools</strong><small>Git, GitHub, Jupyter, Google Colab</small></div></article>
         </div>
       </section>
 
       <section id="contact" class="content-section contact-section">
         <div class="section-heading"><div><span class="eyebrow">[ESTABLISH_SOCKET]</span><h2>&gt; Terminal Contact &amp; Dispatch</h2></div><span class="section-meta green">● socket_open: READY</span></div>
-        <div class="panel contact-panel">
+        <div class="panel contact-panel pointer-reactive" data-parallax-depth="0.018">
           <p class="comment">// Execute the dispatch shell to connect directly with Aya.</p>
           <a class="email-command" href="mailto:ayaabdalkarem636@gmail.com"><span>$ ./contact.sh --recipient</span> ayaabdalkarem636@gmail.com <b>▣ copy_email</b></a>
           <div class="contact-links"><a href="mailto:ayaabdalkarem636@gmail.com">▧ <span>Email<br><small>Start a conversation ↗</small></span></a><a href="https://github.com/aya0" target="_blank" rel="noreferrer">◈ <span>GitHub Profile<br><small>@aya0 ↗</small></span></a><a href="https://www.linkedin.com/in/aya-abd-alkarim-1b4124326/" target="_blank" rel="noreferrer">in <span>LinkedIn Profile<br><small>@aya-abdalkarem ↗</small></span></a></div>
