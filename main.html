@@ -1,99 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aya Abd Al-Karem's computer science portfolio.">
+  <title>Aya Abd Al-Karem | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="telemetry" aria-label="System telemetry">
+    <span class="status"><i></i> aya@portfolio: ~/work</span>
+    <span class="telemetry-message">● OPEN_FOR_WORK: AI Engineering | Full-Stack Development</span>
+    <span class="telemetry-right">uptime: learning always <b>tty1</b></span>
+  </div>
 
-    <body>
-     <header>
-        <!-- <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav> -->
-     </header>
+  <header class="site-header">
+    <a class="brand" href="#whoami"><span>&lt;/&gt;</span> aya@portfolio:~</a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="#whoami">whoami</a>
+      <a href="#education">education</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <a class="hire-button" href="#contact">&gt; hire_me</a>
+  </header>
 
-     <container class="main-container">
-        <div class="terminal section">
-            <div class="terminal-header "> 
-                <div class="terminal-buttons">
-                    <span class="button_red"></span>
-                    <span class="button_yellow"></span>
-                    <span class="button_green"></span>
-                </div>
-                
-                <div class="terminal-title-container ">
-                    <img src="images/icons/folder.png" alt="folder icons" class="terminal-folder-icon" width="15" height="15">
-                    <span class="terminal-title"> Aya-Portfolio </span >
-                </div>
-            </div>
-            <div class="terminal-body">
-                <p> &nbsp; Hello and welcome to Aya's portfolio! </p>
-                <p>	&nbsp; Aya@Ayas-portfolio ~ % </p> 
-            </div>
-        </div>  
-
-        <div class="KnowMe section">
-             <h2>Know Me</h2>
-             <div class="AbouMe">
-                <h3>About Me</h3>
-                <p>
-                    Heyyy, I'm Aya! I'm a passionate web developer with strong skills in creating beautiful and functional websites using HTML, CSS, and JavaScript. I'm particularly interested in backend development, including working with databases and server-side programming.
-                    <br><br>
-                    I also have a strong interest in machine learning and data analysis. I enjoy researching these fields and exploring their real-world applications. Through internships and hands-on projects, I have gained valuable experience in data science and machine learning.
-                </p>        
-             </div>
-
-             <div class="Eduction_expirince">
-                <h3>Education and Experience</h3>
-                <p>
-                    I am a Computer Science student at Birzeit University, with a strong interest in Artificial Intelligence, Machine Learning, web development, and data-driven technologies. Throughout my academic journey, I have gained practical experience in both frontend and backend development, as well as AI engineering. I have worked as a Frontend Developer and completed internships where I developed skills in web technologies, RESTful APIs, databases, data analysis, and machine learning. Currently, I am gaining hands-on experience as an AI Engineer and Full-Stack Developer, working on real-world AI applications and developing intelligent systems.
-                </p>
-             </div>
-             <div class="Skills">
-                <h3>Skills</h3>
-                <p>Python, Java, C++, Supervised Learning, Unsupervised Learning, Classification, Regression, NumPy, Pandas, Data Cleaning, Feature Engineering, Image Classification, Object Detection, Medical Image Analysis, Jupyter Notebook, Google Colab, Git, GitHub</p>
-             </div>
+  <main class="page-grid">
+    <div class="page-content">
+      <section class="terminal-window" id="whoami" aria-labelledby="whoami-title">
+        <div class="window-bar">
+          <div class="window-controls"><i></i><i></i><i></i></div>
+          <div class="window-tab">▣ bash - 80x24</div>
+          <span class="session-label">session: live</span>
         </div>
-
-        <div class="projects section">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Land Registration Management Information System</h3>
-                <p>LRMIS (Land Registration Management Information System) is a web-based land registration workflow system built with a **FastAPI backend, React frontend, and MongoDB database**. The system streamlines the land registration process by allowing users to submit land applications, manage applicant profiles, track documents, comments, and objections, and monitor workflow transitions. It also supports surveyor assignment, survey milestones, survey reports, and registrar reviews, while providing **analytics dashboard endpoints and live parcel map geofeeds** to improve decision-making, transparency, and overall management of land registration activities.</p>
-                <a href="https://github.com/aya0/LRMIS_webservice_finalproject" target="_blank">GitHub Link</a>
-            </div>
-            <div class="project">
-                <h3>Neuro Lens, Machine Detection for Brain Hemorrhage and Glioma tumor.(Graduation project)</h3>
-                <p>Accurate and timely diagnosis is critical in medical fields, yet the diagnostic process remains vulnerable to human error, particularly in the evaluation of neurological conditions. Our project proposal for the development of an Intelligent Diagnostic System designed to assist doctors and radiologists in the diagnosis of brain tumors : brain glioma tumors (using MRI) and intracranial hemorrhages (ICH) (using CT scans). The system will use the deep learning models, specifically variants of the CNN  architecture, to not only classify the presence of disease but also to accurately identify and segment the affected regions. The primary objectives are to enhance the efficiency and reliability of medical evaluations, minimize the risk of diagnostic errors, and provide a transparent, user-friendly platform for all users, including patients. By integrating advanced AI with clinical workflow, this project aims to reduce the workload on medical professionals and ultimately improve patient care outcomes.</p>
-                <a href="https://github.com/NeuroLensG/CT-Model" target="_blank">GitHub Link</a>
-            </div>
-            <div class="project">
-                <h3>Flight Delay Prediction</h3>
-                <p>This project builds a data science pipeline to study and predict flight delays in different countries. It uses airport data and delay data to understand the reasons for delays. Finally, a simple model is used to predict whether a flight will be delayed or not and and explain the results.</p>
-                <a href="https://github.com/RaheeqMousa/Flight-Delay-Prediction" target="_blank">GitHub Link</a>
-            </div>
+        <div class="terminal-content">
+          <div class="command"><span class="prompt">aya@portfolio:~$</span> whoami</div>
+          <div class="terminal-intro">
+            <h1 id="whoami-title">Aya Abd Al-Karem</h1>
+            <p>Computer Science student &amp; <strong>AI Engineer / Full-Stack Developer</strong></p>
+            <small>Building useful systems where intelligent models meet thoughtful interfaces.</small>
+          </div>
+          <div class="command"><span class="prompt">aya@portfolio:~$</span> cat bio.json</div>
+          <pre class="code-block"><span class="key">"focus"</span>: [<span class="string">"Artificial Intelligence"</span>, <span class="string">"Machine Learning"</span>, <span class="string">"Web Development"</span>],
+<span class="key">"education"</span>: <span class="string">"Computer Science · Birzeit University"</span>,
+<span class="key">"currently"</span>: <span class="string">"AI engineering and full-stack applications"</span>,
+<span class="key">"values"</span>: [<span class="string">"curiosity"</span>, <span class="string">"clear systems"</span>, <span class="string">"real-world impact"</span>]</pre>
+          <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+          <form id="terminal-form" class="terminal-form" autocomplete="off">
+            <label class="prompt" for="terminal-input">aya@portfolio:~$</label>
+            <input id="terminal-input" name="command" type="text" spellcheck="false" aria-label="Terminal command" placeholder="type help and press Enter">
+            <span class="cursor" aria-hidden="true"></span>
+          </form>
+          <p class="terminal-hint">Try <button type="button" data-command="help">help</button>, <button type="button" data-command="projects">projects</button>, or <button type="button" data-command="contact">contact</button>. Use ↑ / ↓ for command history.</p>
+          <div class="quick-actions">
+            <a href="#projects">▶ run: ./view_projects.sh</a>
+            <a href="#education">▣ run: ./inspect_academics.sh</a>
+            <a href="#contact">@ run: ./send_email.sh</a>
+          </div>
         </div>
+      </section>
 
-        <div class="contact section">
-            <h2>Contact</h2>
-            <p>Email: ayaabdalkarem636@gmail.com</p>
-        </div>  
+      <section id="education" class="content-section">
+        <div class="section-heading">
+          <div><span class="eyebrow">[ACADEMIC_RECORD]</span><h2>&gt; Academic Rigor &amp; Foundations</h2></div>
+          <span class="section-meta">verified_credentials.bin</span>
+        </div>
+        <div class="education-grid">
+          <article class="panel education-main">
+            <div class="panel-top"><span class="tag">✧ CLASS OF MAY 2025</span><span>GPA: IN PROGRESS</span></div>
+            <h3>Birzeit University</h3>
+            <p>Bachelor of Science in Computer Science</p>
+            <div class="rule"></div>
+            <span class="muted-label">CORE AREAS OF STUDY:</span>
+            <div class="chips"><span>Artificial Intelligence</span><span>Machine Learning</span><span>Data Structures</span><span>Databases</span><span>Software Engineering</span></div>
+          </article>
+          <div class="education-side">
+            <article class="panel compact-panel"><div class="panel-top"><span class="cyan">▧ AI ENGINEERING</span><span>NOW</span></div><h3>Building intelligent systems</h3><p>Hands-on work with machine learning, computer vision, and data-driven applications.</p></article>
+            <article class="panel compact-panel"><div class="panel-top"><span class="cyan">▧ FULL-STACK DEVELOPMENT</span><span>ACTIVE</span></div><h3>From interface to API</h3><p>Creating reliable products with modern frontend, backend, database, and REST API tools.</p></article>
+          </div>
+        </div>
+      </section>
 
-     </container>
+      <section id="projects" class="content-section">
+        <div class="section-heading">
+          <div><span class="eyebrow">[REPOSITORIES &amp; SYSTEMS]</span><h2>&gt; Featured Production Projects</h2></div>
+          <span class="section-meta">git status: clean | 3 tracked artifacts</span>
+        </div>
+        <div class="projects-grid">
+          <article class="panel project-card">
+            <div class="panel-top"><span class="tag">● repo: lrmIS</span><span class="metric">★ featured</span></div>
+            <h3>Land Registration Management Information System <a href="https://github.com/aya0/LRMIS_webservice_finalproject" target="_blank" rel="noreferrer">↗</a></h3>
+            <p>Workflow platform for land applications, applicant profiles, documents, comments, objections, survey milestones, registrar reviews, analytics, and parcel map feeds.</p>
+            <div class="tech-row"><span>FastAPI</span><span>React</span><span>MongoDB</span><span>REST API</span></div>
+          </article>
+          <article class="panel project-card">
+            <div class="panel-top"><span class="tag">● repo: neurolens</span><span class="metric">★ AI</span></div>
+            <h3>Neuro Lens <a href="https://github.com/NeuroLensG/CT-Model" target="_blank" rel="noreferrer">↗</a></h3>
+            <p>Graduation project exploring deep learning for brain glioma tumors in MRI scans and intracranial hemorrhages in CT scans.</p>
+            <div class="tech-row"><span>Python</span><span>CNN</span><span>Computer Vision</span><span>Medical AI</span></div>
+          </article>
+          <article class="panel project-card">
+            <div class="panel-top"><span class="tag">● repo: flight-delay</span><span class="metric">★ data</span></div>
+            <h3>Flight Delay Prediction <a href="https://github.com/RaheeqMousa/Flight-Delay-Prediction" target="_blank" rel="noreferrer">↗</a></h3>
+            <p>Data science pipeline analyzing airport and delay data, then predicting whether a flight will be delayed and explaining the result.</p>
+            <div class="tech-row"><span>Python</span><span>Pandas</span><span>Data Analysis</span><span>ML</span></div>
+          </article>
+        </div>
+      </section>
 
-     <footer >
-        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
-     </footer>  
+      <section id="skills" class="content-section">
+        <div class="section-heading">
+          <div><span class="eyebrow">[KERNEL_TELEMETRY]</span><h2>&gt; Technical Skills Matrix</h2></div>
+          <span class="section-meta">profile.loaded: 18 competencies detected</span>
+        </div>
+        <div class="skills-grid">
+          <article class="panel skill-panel"><h3>▣ Languages &amp; Data</h3><div class="skill"><span>Python</span><b>Advanced</b><div><i style="width:92%"></i></div></div><div class="skill"><span>Java / C++</span><b>Advanced</b><div><i style="width:82%"></i></div></div><div class="skill"><span>NumPy / Pandas</span><b>Proficient</b><div><i style="width:88%"></i></div></div></article>
+          <article class="panel skill-panel"><h3>△ AI &amp; Development</h3><div class="skill"><span>Machine Learning</span><b>Advanced</b><div><i style="width:90%"></i></div></div><div class="skill"><span>Computer Vision</span><b>Proficient</b><div><i style="width:78%"></i></div></div><div class="skill"><span>HTML / CSS / JS</span><b>Advanced</b><div><i style="width:86%"></i></div></div></article>
+          <article class="panel skill-panel"><h3>◎ Core Foundations</h3><div class="foundation"><strong>Supervised Learning</strong><small>Classification, regression, evaluation</small></div><div class="foundation"><strong>Unsupervised Learning</strong><small>Clustering, feature engineering</small></div><div class="foundation"><strong>Engineering Tools</strong><small>Git, GitHub, Jupyter, Google Colab</small></div></article>
+        </div>
+      </section>
 
-    </body> 
+      <section id="contact" class="content-section contact-section">
+        <div class="section-heading"><div><span class="eyebrow">[ESTABLISH_SOCKET]</span><h2>&gt; Terminal Contact &amp; Dispatch</h2></div><span class="section-meta green">● socket_open: READY</span></div>
+        <div class="panel contact-panel">
+          <p class="comment">// Execute the dispatch shell to connect directly with Aya.</p>
+          <a class="email-command" href="mailto:ayaabdalkarem636@gmail.com"><span>$ ./contact.sh --recipient</span> ayaabdalkarem636@gmail.com <b>▣ copy_email</b></a>
+          <div class="contact-links"><a href="mailto:ayaabdalkarem636@gmail.com">▧ <span>Email<br><small>Start a conversation ↗</small></span></a><a href="https://github.com/aya0" target="_blank" rel="noreferrer">◈ <span>GitHub Profile<br><small>@aya0 ↗</small></span></a><a href="https://www.linkedin.com/in/aya-abd-alkarim-1b4124326/" target="_blank" rel="noreferrer">in <span>LinkedIn Profile<br><small>@aya-abdalkarem ↗</small></span></a></div>
+        </div>
+      </section>
+    </div>
+  </main>
 
-
-
+  <footer><span>● sys_status: 200 OK</span><span>© 2026 Aya Abd Al-Karem</span><span>github · terminal_logs · source_code</span></footer>
+</body>
 </html>
